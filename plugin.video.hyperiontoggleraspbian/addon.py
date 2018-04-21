@@ -6,7 +6,7 @@ addon       = xbmcaddon.Addon()
 addonname   = addon.getAddonInfo('name')
 
      # kill hyperiond and rename config files
-cmd = "sudo systemctl stop hyperion.service 2>/dev/null; sudo /etc/init.d/hyperion stop 2>/dev/null ; sudo /sbin/initctl stop hyperion 2>/dev/null"
+cmd = "sudo systemctl stop hyperion.service 2>/dev/null ; sudo /etc/init.d/hyperion stop 2>/dev/null ; sudo /sbin/initctl stop hyperion 2>/dev/null"
 os.system(cmd) 
 os.rename("/etc/hyperion/hyperion.config.json", "/etc/hyperion/hyperion.config2.json")
 os.rename("/etc/hyperion/hyperion.config1.json", "/etc/hyperion/hyperion.config.json")
